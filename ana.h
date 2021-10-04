@@ -180,7 +180,7 @@ ana::ana(TTree *tree) : fChain(0)
     TChain* chain = new TChain("HZZ4LeptonsAnalysisReduced"); // this needs to match the TTree name
     // add to the TChain all the data tree files 
     chain->Add("/data/users/jabeen/HONR268N_HiggsAnalysis/Excercise-Electron/output_DoubleElectron_MC.root");
-    //chain->Add("/data/users/jabeen/HONR268N_HiggsAnalysis/Excercise-Electron/output_DoubleElectron_Data.root");
+    chain->Add("/data/users/jabeen/HONR268N_HiggsAnalysis/Excercise-Electron/output_DoubleElectron_Data.root");
 
     tree = chain;
     Init(tree);
