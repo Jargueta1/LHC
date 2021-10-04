@@ -94,7 +94,7 @@ void compare() {
   h_ee_data->DrawNormalized("SAMES");
 
   // Do not forget to label things
-  leg = new TLegend(0.6, 0.7, 0.75, 0.89);
+  TLegend* leg = new TLegend(0.6, 0.7, 0.75, 0.89);
   leg->SetBorderSize(0);
   leg->SetFillColor(0);
   leg->AddEntry(h_ee_mc, "MC", "l");
