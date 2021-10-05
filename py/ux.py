@@ -1,6 +1,7 @@
 import os, sys
 import ROOT
 
+
 # To run, do "python <path-to>/demo.py"
  
 # enable running from another directory than the one where demo.py resides
@@ -24,6 +25,7 @@ else:
     to_run = 'execfile(\'{}\')'
  
 bar.AddButton( 'Help on Demos', r'TPython::Exec( "' + to_run.format('demoshelp.py') + '" );', 'Click Here For Help on Running the Demos' )
+bar.AddButton( 'Help on Demos', r'TPython::Exec( "' + to_run.format('ana.py') + '" );', 'Click Here For Help on Running the Demos' )
 bar.AddButton( 'browser',       r'TPython::Exec( "b = ROOT.TBrowser()" );',          'Start the ROOT browser' )
  
 bar.Show()
