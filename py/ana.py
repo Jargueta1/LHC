@@ -1,5 +1,5 @@
 import ROOT 
-from ROOT import TFile, TH1F
+from ROOT import TFile, TH1F, TF1
 
 h = TH1F("myHist", "myTitle", 64, -4, 4)
 
@@ -11,6 +11,8 @@ el1_pt =  TH1F("el1_pt", "pT of the most energetic electron candidate", 100, 0, 
 el2_pt = TH1F("el2_pt", "pT of the second most energetic electron candidate", 100, 0, 200);
 Z_ee =  TH1F("Z_ee", "Di-electron candidate invariant mass", 200, 0, 200);
 
-el1_eta.FillRandom("x+1",1000)
+sqroot = TF1( 'sqroot', 'x*gaus(0) + [3]*form1', 0, 10 )
+
+el1_eta.FillRandom("sqroot",1000)
 el1_eta.SetFillColor( 45 )
 el1_eta.Draw()
