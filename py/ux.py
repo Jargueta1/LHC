@@ -24,9 +24,13 @@ if sys.version_info[0] > 2:
 else:
     to_run = 'execfile(\'{}\')'
  
-bar.AddButton( 'Help on Demos', r'TPython::Exec( "' + to_run.format('help.py') + '" );', 'Click Here For Help on Running the Demos' )
-bar.AddButton( 'Histogram', r'TPython::Exec( "' + to_run.format('demo.py') + '" );', 'Click Here For Help on Running the Demos' )
+bar.AddButton( 'Help on Demos', r'TPython::Exec( "' + to_run.format('help.py') + '" );', 'Click Here For Help' )
+bar.AddButton( 'Histogram', r'TPython::Exec( "' + to_run.format('demo.py') + '" );', 'Click Here to run Demo' )
+bar.AddButton( 'ana.py', r'TPython::Exec( "' + to_run.format('ana.py') + '" );', 'Click Here to run ana file' )
+
+## Will launch TBrowser
 bar.AddButton( 'browser',       r'TPython::Exec( "b = ROOT.TBrowser()" );',          'Start the ROOT browser' )
+
  
 bar.Show()
  
