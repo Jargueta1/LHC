@@ -2,7 +2,7 @@ import ROOT
 from ROOT import TFile, TH1F
 
 h = TH1F("myHist", "myTitle", 64, -4, 4)
-h.FillRandom("gaus")
+
 
 output = TFile("Dielectron_MC.root", "Recreate"); 
 
@@ -12,6 +12,6 @@ el1_pt =  TH1F("el1_pt", "pT of the most energetic electron candidate", 100, 0, 
 el2_pt = TH1F("el2_pt", "pT of the second most energetic electron candidate", 100, 0, 200);
 Z_ee =  TH1F("Z_ee", "Di-electron candidate invariant mass", 200, 0, 200);
 
-h.FillRandom()
+h.FillRandom("gause")
 h.SetFillColor( 45 )
 h.Draw()
