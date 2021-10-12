@@ -12,6 +12,6 @@ el1_pt =  TH1F("el1_pt", "pT of the most energetic electron candidate", 100, 0, 
 el2_pt = TH1F("el2_pt", "pT of the second most energetic electron candidate", 100, 0, 200);
 Z_ee =  TH1F("Z_ee", "Di-electron candidate invariant mass", 200, 0, 200);
 
-el1_eta.FillRandom("gause")
+el1_eta.FillRandom("gause",1000)
 el1_eta.SetFillColor( 45 )
 el1_eta.Draw()
